@@ -16,10 +16,9 @@ public class Library {
         temp[sarasoDydis - 1] = knyga.toString();
         knyguSarasas = temp;
     }
-    public void removeBook(Book knyga) throws Exception {
+    public void removeBook(Book knyga) throws TokiosKnygosNeraException {
         if (knyga == null){
-            System.out.println("Tokios knygos nera");
-            throw new Exception("Tokios knygos nera");
+            throw new TokiosKnygosNeraException();
         }
         for(int i = 0; i < knyguSarasas.length; i++){
             if (knyguSarasas[i].equals(knyga.toString())){
